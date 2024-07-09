@@ -1,18 +1,31 @@
-class cinema:
+class Cinema:
     def __init__(self):
         self.dia = ""
         self.hrs = 0
-    def calc_entrada(self):
-        self.ingresso = 0
-        if self.dia == "Segunda":
-            self.ingresso = 16
-        if self.dia == "Terça":
-            self.ingresso = 16
-        if self.dia == "Quinta":
-            self.ingresso = 16
-        return self.ingresso
+    
+    def sessao(self):
+        ingresso = 0
+        if self.dia == "Segunda" or self.dia == "Terça" or self.dia == "Quinta":
+            ingresso = 16
+            print(f'valor do ingresso está {ingresso},00R$')
+            if self.hrs >= 17 <= 24:
+                ingresso = ingresso + (ingresso * 50/100)
+                print(f"Valor do Ingresso está {int(ingresso)},00R$")
+        
+        if self.dia == "Quarta":
+            ingresso = 8
+            print(f"valor do ingresso está {ingresso},00R$")
+        
+        if self.dia == "Domingo" or self.dia == "sabado" or self.dia == "Sexta":
+            ingresso = 20
+            if self.hrs >= 17 <= 24:
+                ingresso = ingresso + (ingresso * 50/100)
+                print(f"Valor do ingresso está {int(ingresso)},00R$")
 
 
-x = cinema()
+
+        
+x = Cinema()
 x.dia = "Segunda"
-print(f'Valor do ingresso hoje é {x.calc_entrada}')
+x.hrs = 13
+x.sessao()
