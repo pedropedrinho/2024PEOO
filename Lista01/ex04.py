@@ -7,7 +7,7 @@ class Cinema:
         ingresso = 0
         if self.dia == "Segunda" or self.dia == "Terça" or self.dia == "Quinta":
             ingresso = 16
-            print(f'valor do ingresso está {ingresso},00R$')
+            #print(f'valor do ingresso está {ingresso},00R$')
             if self.hrs >= 17 <= 24:
                 ingresso = ingresso + (ingresso * 50/100)
                 print(f"Valor do Ingresso está {int(ingresso)},00R$")
