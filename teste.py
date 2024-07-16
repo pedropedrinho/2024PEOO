@@ -1,2 +1,4 @@
-a = "01:50"
-print(a.split(":"))
+a = "01:10:10"
+b = []
+a = a.split(":")
+print(a)
