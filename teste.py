@@ -1,2 +1,4 @@
-x = [1, 2, 3, 4, 5]
-print(max(x))
+import datetime
+x = "01/02/2024 09:30"
+b = datetime.datetime.strptime(x, "%d/%m/%Y %H:%M")
+print(b)
